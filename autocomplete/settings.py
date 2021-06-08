@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'clientes.apps.ClientesConfig',
+    'ajax_select',
 ]
 
 MIDDLEWARE = [
