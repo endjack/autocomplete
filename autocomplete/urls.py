@@ -23,11 +23,10 @@ from django.conf.urls.static import static
 admin.autodiscover()
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
-    path('', IndexView.as_view(), name='index'),
-    path('autocomplete-cliente', autocompletecliente, name='autocomplete-cliente'),
-    path('autocomplete', AutoComplete.as_view(), name='autocomplete'),
-    
-    path('ajax_select/', include(ajax_select_urls)),
     path('admin/', admin.site.urls),
-]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    # path('', IndexView.as_view(), name='index'),
+    # path('', autocompletecliente, name='autocomplete-cliente'),
+    path('', autocompletehtml5, name='autocomplete'),   
+    # path('ajax_select/', include(ajax_select_urls)),
+
+]
